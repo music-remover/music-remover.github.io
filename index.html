@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مزيل الموسيقى</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="popup">تم النسخ</div>
+
+    <div class="container">
+        <h1>مزيل الموسيقى</h1>
+
+        <h2>1- تنزيل بايثون</h2>
+        <p><a href="https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe">اضغط هنا</a> (حوالي 28.5 ميجا)</p>
+
+        <p>اضغط <span class="code-one">Add to path</span> أثناء التنزيل</p>
+        <p>اضغط <span class="code-one">Close</span> بعد التنزيل</p>
+        <p>للتأكد افتح <span class="code-one">cmd</span> واكتب <span class="code-one">python --version</span> وكمان <span class="code-one">pip --version</span></p>
+
+        <div class="br"></div>
+
+        <h2>2- تنزيل ffmpeg (لفصل الصوت عن الفيديو)</h2>
+        <p><a href="https://www.gyan.dev/ffmpeg/builds/">اضغط هنا</a> (حوالي 146 ميجا)</p>
+        <p>اختر الملف <span class="code-one">ffmpeg-release-full.7z</span> أو <a href="https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z">اضغط هنا مباشرةً</a></p>
+
+        <p>فك ضغط الملف <span class="code-one">Extract all</span></p>
+        <p>سيظهر لك مجلد داخل المجلد المفكوك</p>
+        <p>أعد تسميته إلى ffmpeg</p>
+        <p>انقل المجلد إلى <span class="code-one" dir="ltr">C:</span> بحيث يصبح <span class="code-one" dir="ltr">C:\ffmpeg</span></p>
+
+        <p>أضف المجلد <span class="code-one">C:\ffmpeg\bin</span> إلى متغيرات النظام</p>
+        <p>للتأكد افتح <span class="code-one">cmd</span> واكتب <span class="code-one">ffmpeg -version</span></p>
+
+        <div class="br"></div>
+
+        <h2>3- تنزيل demucs</h2>
+        <p>افتح <span class="code-one">cmd</span> واكتب <span class="code-one">pip install demucs</span> (حوالي 137.2 ميجا)</p>
+        
+        <p>ثم تنزيل باقي المتطلبات</p>
+        <div class="code">
+            <div class="code-head">
+                <div class="code-copy">
+                    نسخ
+                </div>
+            </div>
+            <div class="code-text">
+                pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+            </div>
+        </div>
+        
+        <p>(حوالي 2.4 جيجا)</p>
+
+        <div class="br"></div>
+
+        <h2>4- أوامر فصل الموسيقى</h2>
+        <p>قم بعمل مجلد <span class="code-one">Scripts</span> في <span class="code-one" dir="ltr">C:</span>:</p>
+        <p>افتح برنامج الملاحظات <span class="code-one">notepad</span> واكتب</p>
+
+        <p>احفظه في المجلد <span class="code-one" dir="ltr">C:\Scripts</span> باسم <span class="code-one">remove_music.ps1</span></p>
+        <p>افتح <span class="code-one">Registry Editor</span> بعدين <span class="code-one">HKEY_CLASSES_ROOT</span> ثم <span class="code-one">*</span> ثم <span class="code-one">shell</span> ثم كليك يمين ثم <span class="code-one">New</span> ثم <span class="code-one">Key</span> ثم <span class="code-one">Remove Music</span></p>
+        <p>ثم اضغط على <span class="code-one">Remove Music</span> ثم كليك يمين ثم <span class="code-one">New</span> ثم <span class="code-one">Key</span> ثم <span class="code-one">command</span></p>
+        <p>ثم اضغط على <span class="code-one">command</span> ثم اضغط على <span class="code-one">default</span> مرتين واكتب</p>
+        
+        <div class="code">
+            <div class="code-head">
+                <div class="code-copy">
+                    نسخ
+                </div>
+            </div>
+
+            <div class="code-text">
+                powershell.exe -NoExit -NoProfile -ExecutionPolicy Bypass -File "C:\Scripts\remove_music.ps1" "%1"
+            </div>
+        </div>
+
+        <p>ثم اضغط على <span class="code-one">OK</span></p>
+        <p>دلوقتي هات أي ملف فيديو كليك يمين ثم <span class="code-one">Show more</span> ثم <span class="code-one">Remove Music</span></p>
+        <p>أول مرة ممكن ينزل عندك ملفات أول ما تشغل الأمر</p>
+    </div>
+</body>
+</html>
