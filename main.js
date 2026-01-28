@@ -108,3 +108,15 @@ Write-Host "=============================="
 Write-Host "All tasks finished ✅"
 Start-Sleep -Seconds 5
 `;
+
+let bigCode = document.querySelector(".big-code");
+
+bigCode.addEventListener("click", () => {
+    navigator.clipboard.writeText(code.trim()).then(() => {
+        popup.style.display = "block";
+
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 1200);
+    });
+});

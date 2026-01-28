@@ -59,7 +59,7 @@ p {
     margin-right: 5%;
 }
 
-.code-one {
+.code-one, .big-code {
     padding: 2px 5px;
     border-radius: 5px;
     background-color: #dddddd;
@@ -68,7 +68,15 @@ p {
 }
 
 .code-one:active {
-    color: rgb(163, 66, 163);
+    color: #a342a3;
+}
+
+.big-code {
+    color: #1e8803;
+}
+
+.big-code:active {
+    color: #32b910;
 }
 
 .code {
