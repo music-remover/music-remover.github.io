@@ -50,10 +50,11 @@ foreach ($file in $Files) {
     $vocals_final = Join-Path $dir "$name\`_vocals$ext"
 
     # If the file is audio
-    if ($ext -in ".mp3", ".wav", ".flac", ".m4a") {
+    if ($ext -in ".mp3", ".wav", ".flac", ".m4a") { # If the file is audio
 
         $vocals_wav = Join-Path $dir "separated\htdemucs\$name\vocals.wav"
 
+        Clear-Host
         Write-Host "=============================="
         Write-Host "1) Removing music from audio..."
         Write-Host "==============================\`n"
@@ -65,6 +66,7 @@ foreach ($file in $Files) {
             continue
         }
 
+        Clear-Host
         Write-Host "=============================="
         Write-Host "2) Converting vocals to original format..."
         Write-Host "==============================\`n"
@@ -74,8 +76,7 @@ foreach ($file in $Files) {
         Write-Host "\`nDone: $vocals_final\`n"
 
     }
-    else {
-        # If the file is a video
+    elseif ($ext -in ".mp4", ".mkv", ".avi", ".mov", ".flv") { # If the file is video
         $audio = Join-Path $dir "$name.wav"
         $vocals_wav = Join-Path $dir "separated\htdemucs\$name\vocals.wav"
         $vocals_mp3 = Join-Path $dir "$name\`_vocals.mp3"
