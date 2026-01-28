@@ -7,9 +7,12 @@ document.querySelectorAll(".code").forEach(codeBlock => {
     copyBtn.addEventListener("click", () => {
         navigator.clipboard.writeText(codeText.innerText.trim()).then(() => {
             copyBtn.innerText = "تم النسخ";
+            popup.style.display = "block";
+
             setTimeout(() => {
                 copyBtn.innerText = "نسخ";
-            }, 1500);
+                popup.style.display = "none";
+            }, 1200);
         });
     });
 });
