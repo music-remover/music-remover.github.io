@@ -232,7 +232,6 @@ const linuxSteps = document.getElementById('linux-steps');
 
 document.getElementById('linux-btn').addEventListener('click', () => {
     // Step 1: Show overlay with matrix
-    linuxSteps.scrollTop = 0;
     mainCont.style.display = 'none';
     overlay.style.display = 'block';
     startMatrix();
@@ -262,6 +261,7 @@ document.getElementById('linux-btn').addEventListener('click', () => {
                 clearInterval(matrixInterval);
                 hackerFace.style.display = 'none';
                 linuxSteps.style.display = 'block';
+                linuxSteps.scrollTop = 0;
 
                 // Bind copy buttons in linux steps
                 linuxSteps.querySelectorAll('.code').forEach(block => {
