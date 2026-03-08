@@ -124,58 +124,124 @@ sudo snap install ffmpeg</div>
         <div style="text-align:center;">
             <button id="linux-btn">🐧 خطوات لينكس</button>
         </div>
-    
+        
         <h2>1- تنزيل بايثون</h2>
         <p><a href="https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe">اضغط هنا</a> (حوالي 28.5 ميجا)</p>
+
         <p>اضغط <span class="code-one">Add to path</span> أثناء التنزيل</p>
+        <img src="./صور/001- python 1.png" alt="">
+        <img src="./صور/001- python 2.png" alt="">
+
         <p>اضغط <span class="code-one">Close</span> بعد التنزيل</p>
+        <img src="./صور/001- python 3.png" alt="">
+
         <p>للتأكد افتح <span class="code-one">cmd</span> واكتب <span class="code-one">python --version</span> ثم <span class="code-one">pip --version</span></p>
+        <img src="./صور/001- cmd.png" alt="">
+
         <p>تم ✅</p>
-    
+
         <div class="br"></div>
-    
+
         <h2>2- تنزيل ffmpeg (لفصل الصوت عن الفيديو)</h2>
         <p><a href="https://www.gyan.dev/ffmpeg/builds/">اضغط هنا</a> (حوالي 146 ميجا)</p>
         <p>اختر الملف <span class="code-one">ffmpeg-release-full.7z</span> أو <a href="https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z">اضغط هنا مباشرةً</a></p>
+
         <p>فك ضغط الملف <span class="code-one">Extract all</span></p>
-        <p>أعد تسمية المجلد الداخلي إلى <span class="code-one">ffmpeg</span></p>
+        <img src="./صور/002- ffmpeg 1.png" alt="">
+        
+        <p>سيظهر لك مجلد داخل المجلد المفكوك</p>
+        <p>أعد تسمية المجلد الداخلي (الذي بداخله ملفات كثيرة) إلى <span class="code-one">ffmpeg</span></p>
+        <img src="/صور/002- ffmpeg 2.png" alt="">
+        <img src="./صور/002- ffmpeg 3.png" alt="">
+        <img src="/صور/002- ffmpeg 4.png" alt="">
+
         <p>انقل المجلد إلى <span class="code-one" dir="ltr">C:</span> بحيث يصبح <span class="code-one" dir="ltr">C:\ffmpeg</span></p>
+        <img src="/صور/002- ffmpeg 5.png" alt="">
+        <img src="/صور/002- ffmpeg 6.png" alt="">
+        <img src="/صور/002- ffmpeg 7.png" alt="">
+
         <p>أضف المجلد <span class="code-one">C:\ffmpeg\bin</span> إلى متغيرات النظام</p>
+        <img src="./صور/002- ffmpeg 8.png" alt="">
+        <img src="./صور/002- ffmpeg 9.png" alt="">
+        <img src="./صور/002- ffmpeg 10.png" alt="">
+        <img src="./صور/002- ffmpeg 11.png" alt="">
+        
         <p>للتأكد افتح <span class="code-one">cmd</span> واكتب <span class="code-one">ffmpeg -version</span></p>
+        <img src="./صور/002- ffmpeg 12.png" alt="">
+
         <p>تم ✅</p>
-    
+
         <div class="br"></div>
-    
+
         <h2>3- تنزيل demucs</h2>
         <p>افتح <span class="code-one">cmd</span> واكتب <span class="code-one">pip install demucs</span> (حوالي 137.2 ميجا)</p>
+        <img src="./صور/003- demucs 1.png" alt="">
+
         <p>ثم تنزيل باقي المتطلبات (حوالي 2.4 جيجا) ⛔️</p>
+
         <div class="code">
-            <div class="code-head"><div class="code-copy">نسخ</div></div>
-            <div class="code-text">pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121</div>
+            <div class="code-head">
+                <div class="code-copy">
+                    نسخ
+                </div>
+            </div>
+            <div class="code-text">
+                pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+            </div>
         </div>
+        
         <p>تم ✅</p>
-    
+
         <div class="br"></div>
-    
+
         <h2>4- أوامر فصل الموسيقى</h2>
-        <p>قم بعمل مجلد <span class="code-one">Scripts</span> في <span class="code-one" dir="ltr">C:</span></p>
+        <p>قم بعمل مجلد <span class="code-one">Scripts</span> في <span class="code-one" dir="ltr">C:</span>:</p>
+        <img src="./صور/004- macro 1.png" alt="">
+
         <p>افتح برنامج الملاحظات <span class="code-one">notepad</span> واكتب <span class="big-code">هذا</span></p>
         <p>احفظه في المجلد <span class="code-one" dir="ltr">C:\Scripts</span> باسم <span class="code-one">remove_music.ps1</span></p>
+        <img src="./صور/004- macro 2.png" alt="">
+
         <p>افتح <span class="code-one">Registry Editor</span> ثم <span class="code-one">HKEY_CLASSES_ROOT</span> ثم <span class="code-one">*</span> ثم <span class="code-one">shell</span> ثم انقر الزر الأيمن من الفأرة ثم <span class="code-one">New</span> ثم <span class="code-one">Key</span> ثم <span class="code-one">Remove Music</span></p>
+        <img src="./صور/004- macro 3.png" alt="">
+        <img src="./صور/004- macro 4.png" alt="">
+        
         <p>ثم اضغط على <span class="code-one">Remove Music</span> ثم انقر الزر الأيمن من الفأرة ثم <span class="code-one">New</span> ثم <span class="code-one">Key</span> ثم <span class="code-one">command</span></p>
+        <img src="./صور/004- macro 5.png" alt="">
+
         <p>ثم اضغط على <span class="code-one">command</span> ثم اضغط على <span class="code-one">default</span> مرتين واكتب</p>
+        
         <div class="code">
-            <div class="code-head"><div class="code-copy">نسخ</div></div>
-            <div class="code-text">powershell.exe -NoExit -NoProfile -ExecutionPolicy Bypass -File "C:\Scripts\remove_music.ps1" "%1"</div>
+            <div class="code-head">
+                <div class="code-copy">
+                    نسخ
+                </div>
+            </div>
+
+            <div class="code-text">
+                powershell.exe -NoExit -NoProfile -ExecutionPolicy Bypass -File "C:\Scripts\remove_music.ps1" "%1"
+            </div>
         </div>
+
+        <img src="./صور/004- macro 6.png" alt="">
+
         <p>ثم اضغط على <span class="code-one">OK</span></p>
+        
         <p>تم ✅</p>
-    
+
         <div class="br"></div>
-    
+
         <h2>تجربة الأداة</h2>
         <p>الآن اختر أي ملف فيديو أو صوت لفصل الموسيقى منه ثم انقر الزر الأيمن من الفأرة ثم <span class="code-one">Show more</span> ثم <span class="code-one">Remove Music</span></p>
+        <img src="./صور/005- try 1.png" alt="">
+        <img src="./صور/005- try 2.png" alt="">
+        <img src="./صور/005- try 3.png" alt="">
+
         <p>⚠️ في أول مرة تشغيل من الممكن أن يتم تنزيل بعض الملفات الإضافية</p>
+
+        <p>هذا الملف هو الناتج النهائي بعد فصل الموسيقى:</p>
+        <img src="./صور/005- try 4.png" alt="">
+        
         <p style="padding-bottom: 20px;">تم بحمد الله ✅</p>
     </div>
 </body>
