@@ -76,6 +76,10 @@ p {
   filter: drop-shadow(0 0 37px #0f0);
 }
 
+#hacker-overlay img {
+  filter: invert(1) grayscale(100%) sepia(100%) hue-rotate(90deg) saturate(600%)
+}
+
 .code-one, .big-code {
   padding: 2px 5px;
   border-radius: 5px;
