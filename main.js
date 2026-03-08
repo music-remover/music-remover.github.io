@@ -232,6 +232,7 @@ const linuxSteps = document.getElementById('linux-steps');
 
 document.getElementById('linux-btn').addEventListener('click', () => {
     // Step 1: Show overlay with matrix
+    linuxSteps.scrollTop = 0;
     mainCont.style.display = 'none';
     overlay.style.display = 'block';
     startMatrix();
@@ -294,8 +295,9 @@ document.getElementById('linux-btn').addEventListener('click', () => {
 
 // Close button
 document.getElementById('close-overlay').addEventListener('click', () => {
-    mainCont.style.display = 'block';
+    mainContent.scrollTop = 0;
     overlay.style.display = 'none';
+    mainCont.style.display = 'block';
     linuxSteps.style.display = 'none';
     hackerFace.style.display = 'block';
     hackerFace.style.left = '-400px';
