@@ -295,7 +295,7 @@ document.getElementById('linux-btn').addEventListener('click', () => {
 
 // Close button
 document.getElementById('close-overlay').addEventListener('click', () => {
-    mainContent.scrollTop = 0;
+    mainCont.scrollTop = 0;
     overlay.style.display = 'none';
     mainCont.style.display = 'block';
     linuxSteps.style.display = 'none';
