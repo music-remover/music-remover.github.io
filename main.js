@@ -225,12 +225,14 @@ function playEvilLaugh() {
 }
 
 // ===== MAIN ANIMATION SEQUENCE =====
+const mainCont = document.querySelector('.container');
 const overlay = document.getElementById('hacker-overlay');
 const hackerFace = document.getElementById('hacker-face');
 const linuxSteps = document.getElementById('linux-steps');
 
 document.getElementById('linux-btn').addEventListener('click', () => {
     // Step 1: Show overlay with matrix
+    mainCont.style.display = 'none';
     overlay.style.display = 'block';
     startMatrix();
 
@@ -292,6 +294,7 @@ document.getElementById('linux-btn').addEventListener('click', () => {
 
 // Close button
 document.getElementById('close-overlay').addEventListener('click', () => {
+    mainCont.style.display = 'block';
     overlay.style.display = 'none';
     linuxSteps.style.display = 'none';
     hackerFace.style.display = 'block';
